@@ -1,8 +1,7 @@
 #!/bin/bash
 
+# SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2021 Aditya Mehra <aix.m@outlook.com>
-#
-# SPDX-License-Identifier: MIT
 
 SCRIPTFILE=/etc/pico-wizard/scripts.d/01-copy-cec-config
 

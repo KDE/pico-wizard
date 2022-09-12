@@ -1,6 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileCopyrightText: 2021 Anupam Basak <anupam.basak27@gmail.com>
-//
-// SPDX-License-Identifier: MIT
 
 import QtQuick 2.15
 import QtQuick.Window 2.15

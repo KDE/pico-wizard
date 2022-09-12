@@ -1,7 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileCopyrightText: 2021 Aditya Mehra <aix.m@outlook.com>
-//
-// SPDX-License-Identifier: MIT
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
