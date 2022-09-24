@@ -11,7 +11,15 @@ setuptools.setup(
     description="A Post Installation Configuration tool",
     long_description="A Post Installation Configuration tool for Linux",
     long_description_content_type="text/plain",
-    scripts=["files/pico-wizard-script-runner"],
+    scripts=[
+        "files/pico-wizard-script-runner",
+        'files/pico-wizard-session',
+        'files/pico-wizard-wrapper',
+    ],
+    data_files = [
+        ('share/wayland-sessions', ['files/pico-wizard-session.desktop']),
+        ('/etc/pico-wizard', ['files/pico-wizard.conf']),
+    ],
     entry_points={
         "console_scripts": [
             "pico-wizard = PicoWizard.__main__:__main__",

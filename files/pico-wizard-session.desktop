@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: MIT
+
+[Desktop Entry]
+Exec=dbus-run-session pico-wizard-session
+TryExec=pico-wizard-session
+DesktopNames=KDE
+Name=Pico Wizard
+Comment=A Post Installation Configuration Wizard
+X-KDE-PluginInfo-Version=
