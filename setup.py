@@ -8,8 +8,8 @@ setuptools.setup(
     version="0.1.0",
     author="Anupam Basak",
     author_email="anupam.basak27@gmail.com",
-    description="A Post Installation COnfiguration tool",
-    long_description="A Post Installation COnfiguration tool for Linux OSes",
+    description="A Post Installation Configuration tool",
+    long_description="A Post Installation Configuration tool for Linux",
     long_description_content_type="text/plain",
     scripts=["files/pico-wizard-script-runner"],
     entry_points={
@@ -17,11 +17,11 @@ setuptools.setup(
             "pico-wizard = PicoWizard.__main__:__main__",
         ]
     },
-    url="https://github.com/pico-wizard/pico-wizard",
+    url="https://invent.kde.org/plasma/pico-wizard/pico-wizard",
     project_urls={
-        "Bug Tracker": "https://github.com/pico-wizard/pico-wizard/issues",
-        "Documentation": "https://github.com/pico-wizard/pico-wizard",
-        "Source Code": "https://github.com/pico-wizard/pico-wizard",
+        "Bug Tracker": "https://bugs.kde.org/enter_bug.cgi?product=PicoWizard",
+        "Documentation": "https://invent.kde.org/plasma/pico-wizard/pico-wizard",
+        "Source Code": "https://invent.kde.org/plasma/pico-wizard/pico-wizard",
     },
     packages=setuptools.find_packages(),
     classifiers=[
@@ -30,9 +30,7 @@ setuptools.setup(
     ],
     license="MIT",
     install_requires=[
-        ### Pyside2 needs to be installed from manjaro repository
-        ### pip doesnt provide prebuilt arm64
-        # "pyside2"
+        "pyside2"
     ],
     python_requires=">=3.6",
     package_data = {
