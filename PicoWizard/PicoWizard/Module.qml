@@ -41,9 +41,9 @@ Item {
         Kirigami.Icon {
             anchors.fill: parent
             anchors.centerIn: parent
-            source: Qt.resolvedUrl("./assets/back.svg")
-            anchors.margins: 12
-            color: "#ffffffff"
+            source: "go-previous"
+            anchors.margins: Kirigami.Units.largeSpacing
+            color: Kirigami.Theme.highlightedTextColor
             isMask: true
         }
     }

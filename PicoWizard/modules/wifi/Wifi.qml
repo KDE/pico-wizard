@@ -67,8 +67,8 @@ Module {
                         Kirigami.Icon {
                             Layout.leftMargin: 0
                             Layout.rightMargin: 4
-                            Layout.preferredWidth: 24
-                            Layout.preferredHeight: 24
+                            Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
+                            Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
                             opacity: 0.7
                             source: wifiModule.getWifiIcon(signal)
                         }
@@ -94,9 +94,9 @@ Module {
                                     opacity: 0.7
                                     Layout.leftMargin: 0
                                     Layout.rightMargin: 0
-                                    Layout.preferredWidth: 10
-                                    Layout.preferredHeight: 10
-                                    source: wifiModule.dir() + "/assets/lock.svg"
+                                    Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                                    source: "object-locked"
                                 }
 
                                 Label {
@@ -109,14 +109,14 @@ Module {
                     }
 
                     Kirigami.Icon {
-                        width: 28
-                        height: 28
+                        width: Kirigami.Units.iconSizes.medium
+                        height: Kirigami.Units.iconSizes.medium
                         anchors {
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                             rightMargin: 12
                         }
-                        source: wifiModule.dir() + "/assets/next.svg"
+                        source: "go-next"
                         color: "#ffcccccc"
                     }
 
@@ -143,22 +143,13 @@ Module {
                 spacing: 12
                 visible: wifiListView.count <= 0
 
-                Kirigami.Icon {
-                    width: 18
-                    height: 18
+                BusyIndicator {
+                    width: Kirigami.Units.smallMedium
+                    height: Kirigami.Units.smallMedium
                     Layout.alignment: Qt.AlignHCenter|Qt.AlignVCenter
 
-                    source: wifiModule.dir() + "/assets/spinner.svg"
-                    color: "#ff666666"
                     opacity: 0.5
-
-                    RotationAnimation on rotation {
-                        loops: Animation.Infinite
-                        from: -90
-                        to: 270
-                        duration: 500
-                        running: true
-                    }
+                    running: true
                 }
 
                 Label {
@@ -207,7 +198,7 @@ Module {
                 anchors.right: parent.right
 
                 Label {
-                    text: `Connect to ${trimName(passwordDialog.wifiName)}`
+                    text: qsTr("Connect to %1").arg(trimName(passwordDialog.wifiName))
                     color: "#444444"
                     font.pointSize: 11
                     font.bold: true
@@ -256,21 +247,13 @@ Module {
                 anchors.verticalCenter: parent.verticalCenter
                 spacing: 12
 
-                Kirigami.Icon {
-                    width: 18
-                    height: 18
+                BusyIndicator {
+                    width: Kirigami.Units.iconSizes.small
+                    height: Kirigami.Units.iconSizes.small
+                    running: true
+                    visible: true
 
-                    source: wifiModule.dir() + "/assets/spinner.svg"
-                    color: "#ff666666"
                     opacity: 0.5
-
-                    RotationAnimation on rotation {
-                        loops: Animation.Infinite
-                        from: -90
-                        to: 270
-                        duration: 500
-                        running: true
-                    }
                 }
 
                 Label {
@@ -288,23 +271,23 @@ Module {
                 var icon = ""
 
                 if (strength > 0 && strength < 25) {
-                    icon = "signal-25.svg"
+                    icon = "network-wireless-signal-weak"
                 } else if (strength >= 25 && strength < 50) {
-                    icon = "signal-50.svg"
+                    icon = "network-wireless-signal-ok"
                 } else if (strength >= 50 && strength < 75) {
-                    icon = "signal-75.svg"
+                    icon = "network-wireless-signal-good"
                 } else if (strength >= 75) {
-                    icon = "signal-100.svg"
+                    icon = "network-wireless-signal-excellent"
                 } else {
-                    icon = "signal-0.svg"
+                    icon = "wireless-signal-none"
                 }
 
-                return wifiModule.dir() + "/assets/" + icon
+                return icon
             }
 
             Component.onCompleted: {
                 root.moduleName = wifiModule.moduleName()
-                root.moduleIcon = wifiModule.dir() + "/assets/wifi.svg"
+                root.moduleIcon = "network-wireless-signal"
             }
 
             property var signals: Connections {

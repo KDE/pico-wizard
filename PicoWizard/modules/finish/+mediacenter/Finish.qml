@@ -89,33 +89,21 @@ FocusScope {
 
         Kirigami.Icon {
             visible: finishModule.isComplete && !runningFinishHook
-            width: 24
-            height: 24
+            width: Kirigami.Units.iconSizes.smallMedium
+            height: Kirigami.Units.iconSizes.smallMedium
             color: "#ffffffff"
             isMask: true
 
             anchors.centerIn: parent
-            source: finishModule.dir() + "/assets/done.svg"
+            source: "answer-correct"
         }
 
-        Kirigami.Icon {
+        BusyIndicator {
             anchors.centerIn: parent
-            visible: !finishModule.isComplete || runningFinishHook
-            width: 24
-            height: 24
+            running: !finishModule.isComplete || runningFinishHook
+            width: Kirigami.Units.iconSizes.smallMedium
+            height: Kirigami.Units.iconSizes.smallMedium
             Layout.alignment: Qt.AlignHCenter
-            color: "#ff444444"
-            isMask: true
-
-            source: finishModule.dir() + "/assets/spinner.svg"
-
-            RotationAnimation on rotation {
-                loops: Animation.Infinite
-                from: -90
-                to: 270
-                duration: 500
-                running: true
-            }
         }
     }
 
@@ -126,8 +114,8 @@ FocusScope {
 
         Kirigami.Icon {
             source: finishModule.dir() + "/assets/remote.svg"
-            width: 24
-            height: 24
+            width: Kirigami.Units.iconSizes.smallMedium
+            height: Kirigami.Units.iconSizes.smallMedium
         }
 
         Label {

@@ -39,14 +39,9 @@ Button {
     }
 
     Kirigami.Icon {
-        id: spinnerIcon
-        width: 24
-        height: 24
-        color: "#ffffffff"
-        isMask: true
-
-        anchors.centerIn: parent
-        source: Qt.resolvedUrl("./assets/spinner.svg")
+        width: Kirigami.Units.iconSizes.smallMedium
+        height: Kirigami.Units.iconSizes.smallMedium
+        running: privateProps.showSpinner
 
         states: [
             State {
@@ -55,38 +50,15 @@ Button {
                     target: nextButtonComponent
                     enabled: false
                 }
-                PropertyChanges {
-                    target: spinnerIcon
-                    opacity: 1.0
-                }
             },
             State {
                 when: !privateProps.showSpinner;
-                PropertyChanges {
-                    target: spinnerIcon
-                    opacity: 0.0
-                }
                 PropertyChanges {
                     target: nextButtonComponent
                     enabled: true
                 }
             }
         ]
-        transitions: Transition {
-            NumberAnimation {
-                property: "opacity"
-                duration: 200
-                easing.type: Easing.InOutQuad
-            }
-        }
-
-        RotationAnimation on rotation {
-            loops: Animation.Infinite
-            from: -90
-            to: 270
-            duration: 500
-            running: true
-        }
     }
 
     Timer {

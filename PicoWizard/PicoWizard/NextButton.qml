@@ -18,8 +18,8 @@ RoundButton {
         property bool showSpinner: false
     }
 
-    width: 64
-    height: 64
+    width: Kirigami.Units.iconSizes.huge
+    height: Kirigami.Units.iconSizes.huge
 
     flat: true
     onClicked: {
@@ -41,13 +41,13 @@ RoundButton {
 
     Kirigami.Icon {
         id: nextIcon
-        width: 24
-        height: 24
-        color: "#ffffffff"
+        width: Kirigami.Units.iconSizes.smallMedium
+        height: Kirigami.Units.iconSizes.smallMedium
         isMask: true
 
         anchors.centerIn: parent
-        source: Qt.resolvedUrl("./assets/next.svg")
+        color: Kirigami.Theme.highlightedTextColor
+        source: "go-next"
 
         states: [
             State {
@@ -68,54 +68,21 @@ RoundButton {
         transitions: Transition {
             NumberAnimation {
                 property: "opacity"
-                duration: 200
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
 
     }
 
-    Kirigami.Icon {
+    BusyIndicator {
         id: spinnerIcon
-        width: 24
-        height: 24
-        color: "#ffffffff"
-        isMask: true
+        width: Kirigami.Units.iconSizes.smallMedium
+        height: Kirigami.Units.iconSizes.smallMedium
 
         anchors.centerIn: parent
-        source: Qt.resolvedUrl("./assets/spinner.svg")
-
-        states: [
-            State {
-                when: privateProps.showSpinner;
-                PropertyChanges {
-                    target: spinnerIcon
-                    opacity: 1.0
-                }
-            },
-            State {
-                when: !privateProps.showSpinner;
-                PropertyChanges {
-                    target: spinnerIcon
-                    opacity: 0.0
-                }
-            }
-        ]
-        transitions: Transition {
-            NumberAnimation {
-                property: "opacity"
-                duration: 200
-                easing.type: Easing.InOutQuad
-            }
-        }
-
-        RotationAnimation on rotation {
-            loops: Animation.Infinite
-            from: -90
-            to: 270
-            duration: 500
-            running: true
-        }
+        running: privateProps.showSpinner
+        visible: privateProps.showSpinner
     }
 
     Timer {
