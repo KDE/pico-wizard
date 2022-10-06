@@ -38,7 +38,8 @@ setuptools.setup(
     ],
     license="MIT",
     install_requires=[
-        "pyside2"
+        "systemd-python",
+        "PySide2",
     ],
     python_requires=">=3.6",
     package_data = {
