@@ -42,8 +42,10 @@ ModuleMediaCenter {
         }
 
         ColumnLayout {
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: root.width * 0.7
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.leftMargin: parent.width * 0.2
+            anchors.rightMargin: parent.width * 0.2
             spacing: Kirigami.Units.smallSpacing
 
             Item {
