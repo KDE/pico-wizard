@@ -143,7 +143,7 @@ Module {
                 }
 
                 function onErrorOccurred(err) {
-                    console.log(`Locale ErrorOccurred : ${err}`)
+                    console.log(qsTr("Locale Error Occurred : %1").arg(err))
                     toastManager.show(err, 2000)
                 }
             }

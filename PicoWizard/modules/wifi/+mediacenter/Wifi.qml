@@ -431,7 +431,7 @@ ModuleMediaCenter {
                 Keys.onEscapePressed: passwordDialog.close()
 
                 Kirigami.Heading {
-                    text: `Connect to ${trimName(passwordDialog.wifiName)}`
+                    text: qsTr("Connect to %1").arg(trimName(passwordDialog.wifiName))
                     color: Kirigami.Theme.textColor
                     level: 1
                     font.bold: true

@@ -40,7 +40,7 @@ Item {
             Layout.alignment: Qt.AlignHCenter
             font.weight: Font.Light
             font.pointSize: 10
-            text: qsTr(`Running Script [${finishModule.runningScriptIndex + 1}/${finishModule.totalScriptsCount}]`)
+            text: qsTr("Running Script [%1/%2]").arg(finishModule.runningScriptIndex + 1).arg(finishModule.totalScriptsCount)
             color: "#888888"
         }
     }
