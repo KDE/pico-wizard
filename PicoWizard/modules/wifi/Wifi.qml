@@ -120,7 +120,6 @@ Module {
                             rightMargin: 12
                         }
                         source: "go-next"
-                        color: "#ffcccccc"
                     }
 
                     MouseArea {

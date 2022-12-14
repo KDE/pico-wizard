@@ -91,7 +91,7 @@ FocusScope {
             visible: finishModule.isComplete && !runningFinishHook
             width: Kirigami.Units.iconSizes.smallMedium
             height: Kirigami.Units.iconSizes.smallMedium
-            color: "#ffffffff"
+            color: Kirigami.Theme.textColor
             isMask: true
 
             anchors.centerIn: parent
