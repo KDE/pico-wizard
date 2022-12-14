@@ -282,7 +282,7 @@ Module {
                 } else if (strength >= 75) {
                     icon = "network-wireless-signal-excellent"
                 } else {
-                    icon = "wireless-signal-none"
+                    icon = "network-wireless-signal-none"
                 }
 
                 return icon
