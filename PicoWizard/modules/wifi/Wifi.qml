@@ -30,8 +30,8 @@ Module {
 
             radius: 4
             border.width: 2
-            border.color: "#fff0f0f0"
-            color: "#fff5f5f5"
+            border.color: Kirigami.Theme.backgroundColor
+            color: Qt.lighter(Kirigami.Theme.backgroundColor, 1.1)
 
             ScrollIndicator {
                 id: wifiScroll
@@ -54,6 +54,7 @@ Module {
                 ScrollIndicator.vertical: wifiScroll
 
                 delegate: Rectangle {
+                    color: Kirigami.Theme.backgroundColor
                     width: parent ? parent.width : 0
                     height: 50
 
@@ -78,6 +79,7 @@ Module {
                                 id: wifiName
                                 text: trimName(ssid)
                                 font.pointSize: 10
+                                color: Kirigami.Theme.textColor
 
                                 function trimName(name) {
                                     if (name.length > 18) {
@@ -101,7 +103,8 @@ Module {
 
                                 Label {
                                     text: security
-                                    color: "#aaaaaa"
+                                    color: Kirigami.Theme.textColor
+                                    opacity: 0.5
                                     font.pointSize: 7
                                 }
                             }

@@ -31,7 +31,7 @@ Item {
             font.weight: Font.Light
             font.pointSize: 32
             text: qsTr("Finalizing")
-            color: "#444"
+            color: Kirigami.Theme.textColor
         }
 
         Label {
@@ -41,7 +41,8 @@ Item {
             font.weight: Font.Light
             font.pointSize: 10
             text: qsTr("Running Script [%1/%2]").arg(finishModule.runningScriptIndex + 1).arg(finishModule.totalScriptsCount)
-            color: "#888888"
+            color: Kirigami.Theme.textColor
+            opacity: 0.5
         }
     }
 
@@ -51,7 +52,7 @@ Item {
         font.pointSize: 32
         text: qsTr("Setup complete")
         anchors.centerIn: parent
-        color: "#444"
+        color: Kirigami.Theme.textColor
     }
 
     RoundButton {
@@ -72,7 +73,7 @@ Item {
         }
 
         background: Rectangle {
-            color: finishModule.isComplete ? "#ff4caf50" : "#f5f5f5"
+            color: finishModule.isComplete ? "#ff4caf50" : Kirigami.Theme.highlightColor
             radius: parent.width
         }
 

@@ -20,6 +20,7 @@ Kirigami.ApplicationWindow {
     y: Screen.height / 2 - height / 2
 
     visibility: maximizeWindow ? Window.Maximized : Window.AutomaticVisibility
+    color: Kirigami.Theme.backgroundColor
 
 //    onClosing: {
 //        if (appStack.depth > 1) {

@@ -20,7 +20,7 @@ Item {
         font.pointSize: 32
         text: qsTr("Welcome")
         anchors.centerIn: parent
-        color: "#444"
+        color: Kirigami.Theme.textColor
     }
 
     NextButton {

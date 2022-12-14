@@ -43,8 +43,8 @@ Module {
 
                 radius: 4
                 border.width: 2
-                border.color: "#fff0f0f0"
-                color: "#fff5f5f5"
+                border.color: Kirigami.Theme.backgroundColor
+                color: Qt.lighter(Kirigami.Theme.backgroundColor, 1.1)
 
                 ScrollIndicator {
                     id: tzScroll
@@ -70,7 +70,7 @@ Module {
                         width: parent ? parent.width : 0
                         height: 40
 
-                        color: ListView.isCurrentItem ? Kirigami.Theme.highlightColor : "#ffffffff"
+                        color: ListView.isCurrentItem ? Kirigami.Theme.highlightColor : Kirigami.Theme.backgroundColor
 
                         Label {
                             anchors {
@@ -78,7 +78,7 @@ Module {
                                 left: parent.left
                                 leftMargin: 12
                             }
-                            color: parent.ListView.isCurrentItem ? "#ffffffff" : "#ff444444"
+                            color: Kirigami.Theme.textColor
 
                             text: tz
                         }

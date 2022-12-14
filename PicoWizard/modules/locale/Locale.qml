@@ -43,8 +43,8 @@ Module {
 
                 radius: 4
                 border.width: 2
-                border.color: "#fff0f0f0"
-                color: "#fff5f5f5"
+                border.color: Kirigami.Theme.backgroundColor
+                color: Qt.lighter(Kirigami.Theme.backgroundColor, 1.1)
 
                 ScrollIndicator {
                     id: localeScroll
@@ -67,6 +67,7 @@ Module {
                     ScrollIndicator.vertical: localeScroll
 
                     delegate: Rectangle {
+                        color: Kirigami.Theme.backgroundColor
                         width: parent ? parent.width : 0
                         height: 40
 
@@ -82,8 +83,7 @@ Module {
                             }
 
                             Label {
-//                                color: selected ? "#ffffffff" : "#ff444444"
-
+                                color: Kirigami.Theme.textColor
                                 text: name
                             }
                         }

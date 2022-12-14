@@ -92,10 +92,10 @@ Item {
             topMargin: Kirigami.Settings.isMobile ? 64 : 112
         }
         background: Rectangle {
-            color: "#fffafafa"
+            color: Qt.lighter(Kirigami.Theme.backgroundColor, 1.1)
             radius: 4
             border.width: 1
-            border.color: "#ffdfdfdf"
+            border.color: Qt.darker(Kirigami.Theme.backgroundColor, 1.05)
         }
 
         ColumnLayout {
