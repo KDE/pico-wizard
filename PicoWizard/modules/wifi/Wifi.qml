@@ -273,7 +273,7 @@ Module {
             function getWifiIcon(strength) {
                 var icon = ""
 
-                if (strength > 0 && strength < 25) {
+                if (strength >= 0 && strength < 25) {
                     icon = "network-wireless-signal-weak"
                 } else if (strength >= 25 && strength < 50) {
                     icon = "network-wireless-signal-ok"
