@@ -425,7 +425,7 @@ ModuleMediaCenter {
 
                 function onErrorOccurred(err) {
                     console.log(qsTr("TZ ErrorOccurred : %1").arg(err))
-                    toastManager.show(err, 2000)
+                    applicationWindow().showPassiveNotification(err, 2000)
                 }
             }
         }

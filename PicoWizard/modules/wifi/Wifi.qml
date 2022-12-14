@@ -301,7 +301,7 @@ Module {
                 }
 
                 function onErrorOccurred(err) {
-                    toastManager.show(err, 2000)
+                    applicationWindow().showPassiveNotification(err, 2000)
                 }
             }
         }

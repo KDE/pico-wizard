@@ -281,7 +281,7 @@ ModuleMediaCenter {
                 }
 
                 function onMycroftDisabledFailed(err) {
-                    toastManager.show(err, 2000)
+                    applicationWindow().showPassiveNotification(err, 2000)
                 }
             }
         }

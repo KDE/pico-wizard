@@ -11,7 +11,7 @@ import org.kde.kirigami 2.7 as Kirigami
 
 import PicoWizard 1.0
 
-ApplicationWindow {
+Kirigami.ApplicationWindow {
     property alias moduleLoader: moduleLoader
 
     id: appRoot
@@ -38,10 +38,6 @@ ApplicationWindow {
             moduleLoader.previousModule()
             appStack.pop()
         }
-    }
-
-    ToastManager {
-        id: toastManager
     }
 
     Connections {
