@@ -186,7 +186,6 @@ Module {
                     DialogButtonBox.buttonRole: DialogButtonBox.AcceptRole
                     font.pixelSize: 10
                     font.bold: true
-                    flat: true
                     hoverEnabled: true
 
                     onClicked: {
@@ -202,7 +201,7 @@ Module {
 
                 Label {
                     text: qsTr("Connect to %1").arg(trimName(passwordDialog.wifiName))
-                    color: "#444444"
+                    color: Kirigami.Theme.textColor
                     font.pointSize: 11
                     font.bold: true
                     topPadding: 8
@@ -261,7 +260,7 @@ Module {
 
                 Label {
                     text: qsTr("Connecting")
-                    color: "#ff444444"
+                    color: Kirigami.Theme.textColor
                     opacity: 0.5
                 }
             }
