@@ -81,7 +81,7 @@ FocusScope {
         }
 
         background: Rectangle {
-            color: finishModule.isComplete ? "#ff4caf50" : "#f5f5f5"
+            color: finishModule.isComplete ? "#ff4caf50" : Kirigami.Theme.highlightColor
             radius: 2
             border.width: 1
             border.color: finishBtn.activeFocus ? Kirigami.Theme.highlightColor : "transparent"
