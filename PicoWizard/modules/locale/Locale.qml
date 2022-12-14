@@ -4,8 +4,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import QtQuick.Controls.Material 2.15
-import QtQuick.Controls.Material.impl 2.15
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.kirigami 2.7 as Kirigami
@@ -72,8 +70,6 @@ Module {
                         width: parent ? parent.width : 0
                         height: 40
 
-//                        color: selected ? Material.color(Material.Blue) : "#ffffffff"
-
                         RowLayout {
                             anchors {
                                 verticalCenter: parent.verticalCenter
@@ -83,7 +79,6 @@ Module {
 
                             CheckBox {
                                 checked: selected
-                                Material.accent: Material.color(Material.Blue)
                             }
 
                             Label {
