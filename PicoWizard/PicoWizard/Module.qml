@@ -10,75 +10,71 @@ import org.kde.kirigami 2.7 as Kirigami
 
 import PicoWizard 1.0
 
-Item {
+ColumnLayout {
     property alias moduleName: labelModuleName.text
     property alias moduleIcon: icon.source
     property alias moduleIconColor: icon.color
     property alias delegate: delegateLoader.sourceComponent
     property bool hideSkip: false
 
-    RoundButton {
-        width: Kirigami.Settings.isMobile ? 40 : 48
-        height: Kirigami.Settings.isMobile ? 40 : 48
-        hoverEnabled: false
+    RowLayout {
+        Layout.fillWidth: true
+        Layout.fillHeight: false
+        Layout.topMargin: 64
+        Layout.rightMargin: Kirigami.Settings.isMobile ? 24 : 56
 
-        anchors {
-            right: labelModuleName.left
-            rightMargin: 4
-            verticalCenter: labelModuleName.verticalCenter
-        }
-        flat: true
-        onClicked: {
-            moduleLoader.back()
-        }
-        visible: moduleLoader.hasPrevious
-        z: 100
+        RoundButton {
+            Layout.fillWidth: false
+            Layout.fillHeight: false
+            Layout.preferredWidth: Kirigami.Settings.isMobile ? 40 : 48
+            Layout.preferredHeight: Kirigami.Settings.isMobile ? 40 : 48
+            hoverEnabled: false
 
-        background: Rectangle {
-            color: "transparent"
-        }
-
-        Kirigami.Icon {
-            anchors.fill: parent
-            anchors.centerIn: parent
-            source: "go-previous"
-            anchors.margins: Kirigami.Units.largeSpacing
-            color: Kirigami.Theme.highlightedTextColor
-            isMask: true
-        }
-    }
-
-    Label {
-        id: labelModuleName
-        anchors {
-            left: parent.left
-            top: parent.top
-            leftMargin: Kirigami.Settings.isMobile ? 54 : 56
-            topMargin: Kirigami.Settings.isMobile ? 32 : 56
-        }
-        font.weight: Font.Light
-        font.pointSize: Kirigami.Settings.isMobile ? 16 : 24
-        color: "#fff5f5f5"
-    }
-
-    Label {
-        id: labelSkip
-        anchors {
-            right: parent.right
-            top: parent.top
-            rightMargin: Kirigami.Settings.isMobile ? 40 : 56
-            topMargin: Kirigami.Settings.isMobile ? 32 : 56
-        }
-        font.weight: Font.Light
-        font.pointSize: Kirigami.Settings.isMobile ? 16 : 24
-        color: "#fff5f5f5"
-        text: qsTr("Skip")
-        visible: !hideSkip
-
-        MouseArea {
-            anchors.fill: parent
+            flat: true
             onClicked: {
-                moduleLoader.nextModule()
+                moduleLoader.back()
+            }
+            opacity: moduleLoader.hasPrevious ? 1 : 0
+            z: 100
+
+            background: Rectangle {
+                color: "transparent"
+            }
+
+            Kirigami.Icon {
+                anchors.fill: parent
+                anchors.centerIn: parent
+                source: "go-previous"
+                anchors.margins: Kirigami.Units.largeSpacing
+                color: Kirigami.Theme.highlightedTextColor
+                isMask: true
+            }
+        }
+
+        Label {
+            id: labelModuleName
+            Layout.fillWidth: true
+            Layout.fillHeight: false
+            font.weight: Font.Light
+            font.pointSize: Kirigami.Settings.isMobile ? 16 : 24
+            color: "#fff5f5f5"
+        }
+
+        Label {
+            id: labelSkip
+            Layout.fillWidth: false
+            Layout.fillHeight: false
+            font.weight: Font.Light
+            font.pointSize: Kirigami.Settings.isMobile ? 16 : 24
+            color: "#fff5f5f5"
+            text: qsTr("Skip")
+            visible: !hideSkip
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    moduleLoader.nextModule()
+                }
             }
         }
     }
