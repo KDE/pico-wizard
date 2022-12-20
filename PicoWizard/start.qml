@@ -18,18 +18,25 @@ Kirigami.ApplicationWindow {
     height: 800
     x: Screen.width / 2 - width / 2
     y: Screen.height / 2 - height / 2
-
     visibility: maximizeWindow ? Window.Maximized : Window.AutomaticVisibility
     color: Kirigami.Theme.backgroundColor
-
-//    onClosing: {
-//        if (appStack.depth > 1) {
-//            moduleLoader.back()
-//            close.accepted = false
-//        }
-//    }
-
     visible: true
+    background: Rectangle {
+        color: Kirigami.Theme.backgroundColor
+
+        Image {
+            id: backgroundItem
+            fillMode: Image.PreserveAspectFit
+            anchors {
+                left: parent.left
+                top: parent.top
+                right: parent.right
+            }
+
+            /* Background provided by loading.io */
+            source: Qt.resolvedUrl("assets/background.svg")
+        }
+    }
 
     ModuleLoader {
         id: moduleLoader
@@ -46,19 +53,6 @@ Kirigami.ApplicationWindow {
         function onLoadModule(url) {
             appStack.push("file:///" + url)
         }
-    }
-
-    Image {
-        id: backgroundItem
-        fillMode: Image.PreserveAspectFit
-        anchors {
-            left: parent.left
-            top: parent.top
-            right: parent.right
-        }
-
-        /* Background provided by loading.io */
-        source: Qt.resolvedUrl("assets/background.svg")
     }
 
     StackView {
