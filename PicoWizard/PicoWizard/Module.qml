@@ -79,14 +79,12 @@ ColumnLayout {
         }
     }
 
-    Pane {
+    Kirigami.Page {
         id: control
-        anchors {
-            fill: parent
-            leftMargin: Kirigami.Settings.isMobile ? 24 : 56
-            rightMargin: Kirigami.Settings.isMobile ? 24 : 56
-            topMargin: Kirigami.Settings.isMobile ? 64 : 112
-        }
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+        Layout.leftMargin: Kirigami.Settings.isMobile ? 24 : 56
+        Layout.rightMargin: Kirigami.Settings.isMobile ? 24 : 56
         background: Rectangle {
             color: Qt.lighter(Kirigami.Theme.backgroundColor, 1.1)
             radius: 4
