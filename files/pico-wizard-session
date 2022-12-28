@@ -1,6 +1,6 @@
 #!/bin/sh
 # SPDX-FileCopyrightText: None
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 [ -f /etc/profile ] && . /etc/profile
 
