@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: None
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 [Desktop Entry]
 Exec=dbus-run-session pico-wizard-session
