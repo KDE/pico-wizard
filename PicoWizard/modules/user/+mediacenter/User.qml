@@ -51,7 +51,7 @@ ModuleMediaCenter {
                 Layout.alignment: Qt.AlignHCenter
 
                 Rectangle {
-                    color: "#1e88e5"
+                    color: Kirigami.Theme.highlightColor
                     radius: 4
                     width: Kirigami.Units.gridUnit * 8
                     height: Kirigami.Units.gridUnit * 1
@@ -76,7 +76,7 @@ ModuleMediaCenter {
 
                 Rectangle {
                     id: infoRectContent
-                    color: "#ff212121"
+                    color: Kirigami.Theme.backgroundColor
                     radius: 4
                     width: parent.width
                     height: Kirigami.Units.gridUnit * 5
@@ -240,7 +240,7 @@ ModuleMediaCenter {
 
                         background: Rectangle {
                             radius: 2
-                            color: "#ff212121"
+                            color: Kirigami.Theme.backgroundColor
                         }
 
                         ColumnLayout {
@@ -248,19 +248,19 @@ ModuleMediaCenter {
 
                             Label {
                                 text: "- Should be lowercase"
-                                color: "white"
+                                color: Kirigami.Theme.textColor
                             }
                             Label {
                                 text: "- Should start with [a-z] or '_'"
-                                color: "white"
+                                color: Kirigami.Theme.textColor
                             }
                             Label {
                                 text: "- Can contain [a-z], [0-9], '_', and '-'"
-                                color: "white"
+                                color: Kirigami.Theme.textColor
                             }
                             Label {
                                 text: "- May end with a '$'"
-                                color: "white"
+                                color: Kirigami.Theme.textColor
                             }
                         }
                     }
@@ -314,7 +314,7 @@ ModuleMediaCenter {
 
                         background: Rectangle {
                             radius: 2
-                            color: "#ff212121"
+                            color: Kirigami.Theme.backgroundColor
                         }
 
                         ColumnLayout {
@@ -322,7 +322,7 @@ ModuleMediaCenter {
 
                             Label {
                                 text: "- Should be digits only [0-9]"
-                                color: "white"
+                                color: Kirigami.Theme.textColor
                             }
                         }
                     }

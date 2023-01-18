@@ -49,7 +49,7 @@ ModuleMediaCenter {
                 Layout.alignment: Qt.AlignHCenter
 
                 Rectangle {
-                    color: "#1e88e5"
+                    color: Kirigami.Theme.activeTextColor
                     radius: 4
                     width: Kirigami.Units.gridUnit * 8
                     height: Kirigami.Units.gridUnit * 1
@@ -74,7 +74,7 @@ ModuleMediaCenter {
 
                 Rectangle {
                     id: infoRectContent
-                    color: "#ff212121"
+                    color: Kirigami.Theme.backgroundColor
                     radius: 4
                     width: parent.width
                     height: Kirigami.Units.gridUnit * 5
@@ -284,7 +284,7 @@ ModuleMediaCenter {
                 }
 
                 Rectangle {
-                    color: "#ff212121"
+                    color: Kirigami.Theme.backgroundColor
                     Layout.fillWidth: true
                     Layout.preferredHeight: Kirigami.Units.gridUnit * 3
 
