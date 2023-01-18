@@ -53,7 +53,7 @@ Module {
 
                     background: Rectangle {
                         radius: 2
-                        color: "#ff212121"
+                        color: Kirigami.Theme.backgroundColor
                     }
 
                     ColumnLayout {
@@ -61,19 +61,19 @@ Module {
 
                         Label {
                             text: "- Should be lowercase"
-                            color: "white"
+                            color: Kirigami.Theme.textColor
                         }
                         Label {
                             text: "- Should start with [a-z] or '_'"
-                            color: "white"
+                            color: Kirigami.Theme.textColor
                         }
                         Label {
                             text: "- Can contain [a-z], [0-9], '_', and '-'"
-                            color: "white"
+                            color: Kirigami.Theme.textColor
                         }
                         Label {
                             text: "- May end with a '$'"
-                            color: "white"
+                            color: Kirigami.Theme.textColor
                         }
                     }
                 }
@@ -116,11 +116,11 @@ Module {
                 placeholderText: userModule.passwordType === 'digitsonly' ? qsTr("Confirm PIN") : qsTr("Confirm Password")
                 inputMethodHints: userModule.passwordType === 'digitsonly' ? Qt.ImhDigitsOnly : Qt.ImhNoAutoUppercase | Qt.ImhNoPredectiveText
 
-//                    border.color: cnfPassword.text.length > 0
-//                                  ? cnfPassword.text !== password.text
-//                                      ? Kirigami.Theme.negativeTextColor
-//                                      : Kirigami.Theme.positiveTextColor
-//                                  : "#ffbdbdbd"
+                // border.color: cnfPassword.text.length > 0
+                //                 ? cnfPassword.text !== password.text
+                //                     ? Kirigami.Theme.negativeTextColor
+                //                     : Kirigami.Theme.positiveTextColor
+                //                 : password.borderColor
             }
         }
 

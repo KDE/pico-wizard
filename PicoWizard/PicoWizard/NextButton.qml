@@ -35,7 +35,7 @@ RoundButton {
     }
 
     background: Rectangle {
-        color: Kirigami.Theme.highlightColor
+        color: enabled ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
         radius: parent.width
     }
 

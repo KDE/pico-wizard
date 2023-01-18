@@ -156,7 +156,7 @@ Module {
                 Label {
                     font.italic: true
                     text: qsTr("Listing Wifi Connections")
-                    color: "#ff666666"
+                    color: Kirigami.Theme.textColor
                     opacity: 0.5
                 }
             }

@@ -73,7 +73,7 @@ Item {
         }
 
         background: Rectangle {
-            color: finishModule.isComplete ? "#ff4caf50" : Kirigami.Theme.highlightColor
+            color: finishModule.isComplete ? Kirigami.Theme.positiveTextColor : Kirigami.Theme.highlightColor
             radius: parent.width
         }
 
@@ -81,7 +81,7 @@ Item {
             visible: finishModule.isComplete && !runningFinishHook
             width: Kirigami.Units.iconSizes.smallMedium
             height: Kirigami.Units.iconSizes.smallMedium
-            color: "#ffffffff"
+            color: Kirigami.Theme.highlightedTextColor
             isMask: true
 
             anchors.centerIn: parent
