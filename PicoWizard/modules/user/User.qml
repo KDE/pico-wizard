@@ -17,7 +17,6 @@ Module {
     id: root
     moduleName: userModule.moduleName()
     moduleIcon: userModule.dir() + "/assets/user.svg"
-    moduleIconColor: "#ff999999"
     hideSkip: true
 
     delegate: Item {

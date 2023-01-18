@@ -13,7 +13,6 @@ import PicoWizard 1.0
 ColumnLayout {
     property alias moduleName: labelModuleName.text
     property alias moduleIcon: icon.source
-    property alias moduleIconColor: icon.color
     property alias delegate: delegateLoader.sourceComponent
     property bool hideSkip: false
 
@@ -98,6 +97,7 @@ ColumnLayout {
             Kirigami.Icon {
                 id: icon
                 isMask: true
+                color: "#ff999999"
 
                 Layout.preferredWidth: Kirigami.Settings.isMobile ? 64 : 196
                 Layout.preferredHeight: Kirigami.Settings.isMobile ? 64 : 196

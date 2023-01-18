@@ -11,7 +11,6 @@ import PicoWizard 1.0
 
 ModuleMediaCenter {
     id: root
-    moduleIconColor: "#ff999999"
     property bool mycroftEnabled: true
 
     delegate: Item {

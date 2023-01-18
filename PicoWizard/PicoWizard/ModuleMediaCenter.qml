@@ -13,7 +13,6 @@ import PicoWizard 1.0
 FocusScope {
     property alias moduleName: labelModuleName.text
     property alias moduleIcon: icon.source
-    property alias moduleIconColor: icon.color
     property alias delegate: delegateLoader.sourceComponent
     property bool hideSkip: false
 
@@ -42,6 +41,7 @@ FocusScope {
                 Kirigami.Icon {
                     id: icon
                     isMask: true
+                    color: "#ff999999"
                     Layout.preferredWidth: 64
                     Layout.preferredHeight: 64
                     Layout.alignment: Layout.Center
