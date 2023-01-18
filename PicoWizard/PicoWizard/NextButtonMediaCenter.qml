@@ -41,7 +41,7 @@ Button {
     Kirigami.Icon {
         width: Kirigami.Units.iconSizes.smallMedium
         height: Kirigami.Units.iconSizes.smallMedium
-        running: privateProps.showSpinner
+        // running: privateProps.showSpinner
 
         states: [
             State {

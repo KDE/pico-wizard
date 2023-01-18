@@ -47,7 +47,7 @@ ModuleMediaCenter {
                 Layout.alignment: Qt.AlignHCenter
 
                 Rectangle {
-                    color: "#1e88e5"
+                    color: Kirigami.Theme.highlightColor
                     radius: 4
                     width: Kirigami.Units.gridUnit * 6
                     height: Kirigami.Units.gridUnit * 1
@@ -72,7 +72,7 @@ ModuleMediaCenter {
 
                 Rectangle {
                     id: infoRectContent
-                    color: "#ff212121"
+                    color: Kirigami.Theme.backgroundColor
                     radius: 4
                     width: parent.width
                     height: Kirigami.Units.gridUnit * 5
@@ -272,7 +272,8 @@ ModuleMediaCenter {
 
                                 Label {
                                     text: security
-                                    color: wifiListView.currentIndex == index ? Kirigami.Theme.textColor : "#aaaaaa"
+                                    color: Kirigami.Theme.textColor
+                                    opacity: 0.5
                                     font.pointSize: 7
                                 }
                             }

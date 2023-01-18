@@ -58,7 +58,7 @@ FocusScope {
             Layout.alignment: Qt.AlignHCenter
 
             Rectangle {
-                color: "#1e88e5"
+                color: Kirigami.Theme.highlightColor
                 radius: 4
                 width: Kirigami.Units.gridUnit * 6
                 height: Kirigami.Units.gridUnit * 1
@@ -83,7 +83,7 @@ FocusScope {
 
             Rectangle {
                 id: infoRectContent
-                color: "#ff212121"
+                color: Kirigami.Theme.backgroundColor
                 radius: 4
                 width: Kirigami.Units.gridUnit * 17.5
                 height: Kirigami.Units.gridUnit * 5
@@ -225,7 +225,7 @@ FocusScope {
                             id: nextIcon
                             anchors.fill: parent
                             anchors.margins: -Kirigami.Units.gridUnit
-                            color: "#ffffffff"
+                            color: Kirigami.Theme.highlightedTextColor
                             isMask: true
                             source: welcomeModule.dir() + "/assets/next.svg"
                         }
