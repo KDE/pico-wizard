@@ -97,7 +97,8 @@ ColumnLayout {
             Kirigami.Icon {
                 id: icon
                 isMask: true
-                color: "#ff999999"
+                color: Qt.lighter(Kirigami.Theme.disabledTextColor, 1.5)
+                opacity: 0.8
 
                 Layout.preferredWidth: Kirigami.Settings.isMobile ? 64 : 196
                 Layout.preferredHeight: Kirigami.Settings.isMobile ? 64 : 196
