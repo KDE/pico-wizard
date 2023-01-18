@@ -14,7 +14,6 @@ ModuleMediaCenter {
     id: root
     moduleName: userModule.moduleName()
     moduleIcon: userModule.dir() + "/assets/user.svg"
-    moduleIconColor: "#ff999999"
     hideSkip: true
     property var digitValidator: RegExpValidator { regExp: /[0-9]*/ }
     property var alphaNumericValidator: RegExpValidator { regExp: /.*/ }

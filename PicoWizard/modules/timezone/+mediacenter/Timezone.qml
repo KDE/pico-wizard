@@ -12,7 +12,6 @@ import PicoWizard 1.0
 
 ModuleMediaCenter {
     id: root
-    moduleIconColor: "#ff999999"
     property var activeFocusedElement
 
     function switchTextByFocus(){

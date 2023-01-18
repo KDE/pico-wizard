@@ -12,7 +12,6 @@ import PicoWizard 1.0
 
 Module {
     id: root
-    moduleIconColor: "#ff999999"
 
     delegate: Item {
         ColumnLayout {
