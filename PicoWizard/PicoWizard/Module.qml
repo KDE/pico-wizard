@@ -56,7 +56,7 @@ ColumnLayout {
             Layout.fillHeight: false
             font.weight: Font.Light
             font.pointSize: Kirigami.Settings.isMobile ? 16 : 24
-            color: "#fff5f5f5"
+            color: Kirigami.Theme.highlightedTextColor
         }
 
         Label {
@@ -65,7 +65,7 @@ ColumnLayout {
             Layout.fillHeight: false
             font.weight: Font.Light
             font.pointSize: Kirigami.Settings.isMobile ? 16 : 24
-            color: "#fff5f5f5"
+            color: Kirigami.Theme.highlightedTextColor
             text: qsTr("Skip")
             visible: !hideSkip
 
